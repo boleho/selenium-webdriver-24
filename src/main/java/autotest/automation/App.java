@@ -1,4 +1,4 @@
-package com.epam.automation;
+package autotest.automation;
 
 /**
  * Hello world!
