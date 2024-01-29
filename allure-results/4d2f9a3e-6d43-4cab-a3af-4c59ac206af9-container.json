@@ -1,1 +1,0 @@
-{"uuid":"4d2f9a3e-6d43-4cab-a3af-4c59ac206af9","name":"selenium-webdriver-24","children":["35fbfc28-d980-43b0-aa50-a01f7a5234e2"],"befores":[{"name":"beforeTest","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1706544121170,"stop":1706544121173}],"afters":[],"links":[],"start":1706544121161,"stop":1706544123049}
