@@ -1,12 +1,16 @@
 # selenium-webdriver-24
 
---------branch epstud-----------------
+==================branch epstud=====================
 
 practising Selenium Webdriver according to materials from EPAM on-line course Selenium Webdriver (links)
 
 https://www.selenium.dev/documentation/
+
 D:\CODE\IDEA\selenium-webdriver-24\src\main\java\autotest\automation
+
 public class HelloSelenium
+
+-------------------------------------------
 
 https://www.selenium.dev/documentation/webdriver/getting_started/
 
