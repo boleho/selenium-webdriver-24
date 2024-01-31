@@ -10,8 +10,13 @@ error - session not created: This version of ChromeDriver only supports Chrome v
 
 notation -  using WebDriverManager.chromedriver().setup() from io.github.bonigarcia.wdm.WebDriverManager
 
----------branch epstud------------------
 
-practising examples from epam-study - SELENIUM WEBDRIVER
+--------branch epstud-----------------
 
-https://www.selenium.dev/documentation/
+practising Selenium Webdriver according to materials from EPAM on-line course Selenium Webdriver
+
+more details in branch epstud readme-file
+
+--------branch opencart------------------
+
+
