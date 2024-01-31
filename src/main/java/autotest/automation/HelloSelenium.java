@@ -1,5 +1,6 @@
 package autotest.automation;
 
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -12,7 +13,7 @@ public class HelloSelenium {
         driver.manage().window().maximize();
         //driver.manage().window().setSize(new Dimension(480, 640)); // mobile screen
         driver.get("https://www.opencart.com/");
-        System.out.println("++=++working le ++==++");
+        System.out.println("++=++ working le ++==++");
         Thread.sleep(3000);
 
         driver.quit();
