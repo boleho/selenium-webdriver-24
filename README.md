@@ -19,4 +19,8 @@ more details in branch epstud readme-file
 
 --------branch opencart------------------
 
+WIP
 
+project JAVA-SELENIUM from GitHub Bogdanom.
+
+----------------
