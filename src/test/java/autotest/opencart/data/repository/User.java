@@ -1,5 +1,3 @@
-
-
 package autotest.opencart.data.repository;
 
 interface IEmail {

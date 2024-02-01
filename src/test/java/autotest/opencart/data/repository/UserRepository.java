@@ -3,12 +3,9 @@
 package autotest.opencart.data.repository;
 
 public final class UserRepository {
-	
 	private static volatile UserRepository instance = null;
-
 	private UserRepository() {
 	}
-	
 	public static UserRepository get() {
 		if(instance == null) {
 			synchronized (UserRepository.class) {
@@ -19,7 +16,6 @@ public final class UserRepository {
 		}
 		return instance;
 	}
-	
 	public IUser wrongCreds() {
 		return User.getUser()
 				.setEmail("wrongEmail")
