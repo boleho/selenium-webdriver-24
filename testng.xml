@@ -3,14 +3,16 @@
 <suite name="Suite1">
   <test name="Test11">
     <classes>
-   <!--   <class name="com.softserve.edu.AppTest"/>   -->
-     <class name="autotest.automation.SelenOpencartTest"/>
-   <!--   <class name="com.softserve.edu.ScrollTest">
-    	 <methods>
-     		<include name="f3"></include>
-     	</methods>
-     </class>
-      -->
+        <!-- -->
+        <class name="autotest.opencart.tests.SmokeTest"/>
+
+       <!--
+       <class name="autotest.opencart.tests.SmokeTest">
+             <methods>
+                 <include name="smokeTest()"></include>
+             </methods>
+         </class>
+        -->
     </classes>
   </test>   
   
