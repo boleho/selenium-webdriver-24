@@ -2,14 +2,15 @@
 
 ==================branch opencart=====================
 
-opencart site testing
+www.opencart.com site testing 
 
-How to start testing - run testng.xml or class SmokeTest
+There are tests in the SmokeTest.java class
 
-TO DO - pom.xml need to be updated to work with webdriver Chrome v.121 in lib folder (right now pom.xml created to work with WebdriverManager - doesn't work)
+Run tests - pom.xml or testng.xml or SmokeTest class
 
-project JAVA-SELENIUM from GitHub Bogdanom.
+Tests work ok - 6 Feb 2024 for Chrome v.121
 
+Need to have right chromedriver.exe in folder \lib
 
 ==================branch epstud==================
 
