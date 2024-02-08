@@ -103,16 +103,10 @@ public class LoginPage {
 		return this;
 	}
 
-	public LoginPage setPassword(IUser user) {
-		clickPassword();
-	    clearPassword();
-		getPassword().sendKeys(user.getPassword());
-		return this;
-	}
+
 	
 	public LoginPage fillFields(IUser user) {
-		this.setEmail(user)
-		    .setPassword(user);
+		this.setEmail(user);
 		return this;
 	}
 	

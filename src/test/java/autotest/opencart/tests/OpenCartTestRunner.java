@@ -1,5 +1,6 @@
 package autotest.opencart.tests;
 
+import autotest.opencart.pages.guest.TopPart;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -7,7 +8,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 
-import autotest.opencart.pages.guest.HomePage;
+
 
 public abstract class OpenCartTestRunner {
 
@@ -21,7 +22,7 @@ public abstract class OpenCartTestRunner {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         //driver.manage().window().setSize(new Dimension(480, 640)); // mobile screen
-        driver.get("https://www.opencart.com/");
+        driver.get("https://yopmail.com/en/");
         System.out.println("\t\t@BeforeClass");
     }
 
@@ -44,8 +45,8 @@ public abstract class OpenCartTestRunner {
         // logout(url/logout, delete cookies, delete cash)
     }
 
-    public HomePage loadApplication() {
-        return new HomePage(driver);
+    public TopPart loadApplication() {
+        return new TopPart(driver);
     }
 
     protected void delay() {

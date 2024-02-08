@@ -2,6 +2,7 @@
 
 package autotest.opencart.pages.guest;
 
+import autotest.opencart.data.repository.IUser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,10 +10,9 @@ import org.openqa.selenium.WebElement;
 public class TopPart {
 	
 	protected WebDriver driver;
-	
-	private WebElement login;
-	private WebElement register;
-	
+
+	private WebElement email;
+	private WebElement submit;
 
 	public TopPart(WebDriver driver) {
 		this.driver = driver;
@@ -21,49 +21,70 @@ public class TopPart {
 
 	private void initElements() {
 
-		login = driver.findElement(By.xpath("//header/nav[1]/div[1]/div[2]/div[1]/a[1]"));
-		register = driver.findElement(By.xpath("//header/nav[1]/div[1]/div[2]/div[1]/a[2]"));
-
+		email = driver.findElement(By.xpath("//input[@id='login']"));
+		submit = driver.findElement(By.xpath("//i[contains(text(),'\uE5C8')]"));
 	}
 	// Page Object
-	
-	// login link
-	
-	public WebElement getLogin() {
-		return login;
+
+	// email field
+
+	public WebElement getEmail() {
+		return email;
 	}
 
-	public LoginPage clickLogin() {
-		getLogin().click();
-		return new LoginPage(driver);
+	public void clickEmail() {
+		getEmail().click();
 	}
 
-	public String getLoginText() {
-		return getLogin().getText();
+	public void clearEmail() {
+		getEmail().clear();
 	}
 
-	public boolean isDisplayedLogin() {
-		return getLogin().isDisplayed();
+	public String getEmailText() {
+		return getEmail().getText();
 	}
 
-	// register link
-	
-	public WebElement getRegister() {
-		return register;
+	// submit button
+
+	public WebElement getSubmit() {
+		return submit;
 	}
 
-	public RegisterPage clickRegister() {
-		getRegister().click();
-		return new RegisterPage(driver);
+	public void clickSubmit() {
+		getSubmit().click();
 	}
 
-	public String getRegisterText() {
-		return getRegister().getText();
+	public SuccessLoginPage clickSubmitLogin() {
+		clickSubmit();
+		return new SuccessLoginPage(driver);
+	}
+	public FailedLoginPage clickSubmitNotlogin() {
+		clickSubmit();
+		return new FailedLoginPage(driver);
 	}
 
-	public boolean isDisplayedRegister() {
-		return getRegister().isDisplayed();
+	public String getSubmitText() {
+		return getSubmit().getText();
 	}
+
+	public boolean isDisplayedSubmit() {
+		return getSubmit().isDisplayed();
+	}
+
+	// Functional
+
+	public TopPart setEmail(IUser user) {
+		clickEmail();
+		clearEmail();
+		getEmail().sendKeys(user.getEmail());
+		return this;
+	}
+
+	public TopPart fillFields(IUser user) {
+		this.setEmail(user);
+		return this;
+	}
+
 
 	// Functional
 
