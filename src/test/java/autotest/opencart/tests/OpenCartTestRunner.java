@@ -7,15 +7,9 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
-
-
-
 public abstract class OpenCartTestRunner {
-
     private static final Long ONE_SECOND_DELAY = 1000L;
-
     protected WebDriver driver;
-
     @BeforeClass
     public void beforeClass() {
         System.setProperty("webdriver.chrome.driver", "./lib/chromedriver.exe");
@@ -23,38 +17,23 @@ public abstract class OpenCartTestRunner {
         driver.manage().window().maximize();
         //driver.manage().window().setSize(new Dimension(480, 640)); // mobile screen
         driver.get("https://yopmail.com/en/");
-        System.out.println("\t\t@BeforeClass");
-    }
-
+        System.out.println("\t\t@BeforeClass");}
     @AfterClass
     public void afterClass() {
-        if (driver != null) {
-            driver.quit();
-        }
-        System.out.println("\t\t@AfterClass");
-    }
-
+        if (driver != null) {driver.quit();}
+        System.out.println("\t\t@AfterClass");}
     @BeforeTest
     public void beforeTest() {
-        System.out.println("\t@BeforeTest");
-    }
-
+        System.out.println("\t@BeforeTest");}
     @AfterTest
     public void afterTest() {
-        System.out.println("\t@AfterTest");
-        // logout(url/logout, delete cookies, delete cash)
-    }
-
+        System.out.println("\t@AfterTest");}
     public TopPart loadApplication() {
-        return new TopPart(driver);
-    }
-
+        return new TopPart(driver);}
     protected void delay() {
-        delay(1);
-    }
+        delay(1);}
     protected void delay(int seconds) {
-        try {
-            Thread.sleep(seconds*ONE_SECOND_DELAY);
+        try { Thread.sleep(seconds*ONE_SECOND_DELAY);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
