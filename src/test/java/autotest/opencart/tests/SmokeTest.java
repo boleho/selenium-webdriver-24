@@ -20,17 +20,15 @@ public class SmokeTest extends OpenCartTestRunner {
 				 .clickSubmitLogin();
 
 		 Assert.assertTrue(lp.isDisplayedCreateMessage());
-	//	 Assert.assertTrue(lp.isDisplayedAccountName());
+		 Assert.assertTrue(lp.isDisplayedAccountName());
 		 Assert.assertTrue(lp.isDisplayedRefreshButton());
-	//	 System.out.println("leAccount name = "+lp.getAccountNameText());
-
-	//	 lp.clickRefreshButton();
+		 System.out.println("leAccount name = "+lp.getAccountNameText());
 
 		 lp.clickCreateMessage()
 				 .switchToMessage()
-				 .setEmail("acc_second24@yopmail.com")
-				 .setSubject("task webdriver")
-				 .setBody("le, it's a message to check");
+				 .setEmail(UserRepository.ACCOUNT2)
+				 .setSubject(UserRepository.SUBJECT)
+				 .setBody(UserRepository.BODY);
 
 		 WebElement sendBtn=driver.findElement(By.xpath("//span[contains(text(),'Send')]"));
 		sendBtn.click();
@@ -51,14 +49,37 @@ public class SmokeTest extends OpenCartTestRunner {
 				.clickSubmitLogin();
 
 		Assert.assertTrue(lp.isDisplayedCreateMessage());
-	//	Assert.assertTrue(lp.isDisplayedAccountName());
+		Assert.assertTrue(lp.isDisplayedAccountName());
 		Assert.assertTrue(lp.isDisplayedRefreshButton());
-	//	System.out.println("leAccount name = "+lp.getAccountNameText());
+		System.out.println("leAccount name = "+lp.getAccountNameText());
 
 		lp.clickRefreshButton();
 
+		lp.clickCreateMessage();
+		System.out.println("lework 1");
+		WebElement letter =
+				driver.findElement(By.xpath("///body/div[2]/div[2]/button[1]/div[1]/span[2]"));
+		System.out.println("le letter  = "+letter.getText());
+		Assert.assertEquals(letter.getText(), UserRepository.ACCOUNT1);
+		System.out.println("lework 2");
+		/*lp.clickChangeFrame()
+						.switchToMessage()
+				.getEmailTo()
+				.getText();
 
-		System.out.println("lework");
+						WebElement sender = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[2]/button[1]/div[1]/span[2]"));
+
+		Assert.assertEquals(sender.getText(), UserRepository.ACCOUNT1);
+
+		WebElement subject = driver.findElement(By.xpath("/html[1]/body[1]/header[1]/div[3]/div[1]"));
+
+		Assert.assertEquals(subject.getText(), UserRepository.SUBJECT);
+
+		WebElement body = driver.findElement(By.xpath("/html[1]/body[1]/main[1]/div[1]/div[1]/div[1]"));
+
+		Assert.assertEquals(body.getText(), UserRepository.BODY);
+*/
+
 
 		delay(6);
 

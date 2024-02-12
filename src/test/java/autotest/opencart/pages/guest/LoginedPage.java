@@ -21,7 +21,7 @@ public class LoginedPage {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}*/
-	//	accountName = driver.findElement(By.xpath("//div[contains(text(),'acc_first24@yopmail.com')]"));
+		accountName = driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]"));
 		createMessage = driver.findElement(By.xpath("//i[contains(text(),'\uE150')]"));
 		refreshButton = driver.findElement(By.xpath("//button[@id='refresh']"));
 	}
@@ -62,4 +62,12 @@ public class LoginedPage {
 		return getRefreshButton().isDisplayed();
 	}
 
+	public ChangeFrame clickChangeFrame() {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		return new ChangeFrame(driver);
+	}
 }
