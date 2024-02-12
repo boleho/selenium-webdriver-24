@@ -22,20 +22,19 @@ public class SmokeTest extends OpenCartTestRunner {
 		 Assert.assertTrue(lp.isDisplayedCreateMessage());
 		 Assert.assertTrue(lp.isDisplayedAccountName());
 		 Assert.assertTrue(lp.isDisplayedRefreshButton());
-		 System.out.println("leAccount name = "+lp.getAccountNameText());
 
-		 lp.clickCreateNewMessage()
+		 Assert.assertEquals(lp.getAccountNameText(), UserRepository.ACCOUNT1);
+
+		 NewMessagePage nmp=lp.clickCreateNewMessage()
 				 .clickChangeFrame()
 				 .switchToNewMessage()
 				 .setEmail(UserRepository.ACCOUNT2)
 				 .setSubject(UserRepository.SUBJECT)
 				 .setBody(UserRepository.BODY);
 
-		 WebElement sendBtn=driver.findElement(By.xpath("//span[contains(text(),'Send')]"));
-		sendBtn.click();
-		 System.out.println("le done");
+		 nmp.clickSend();
 
-		delay(4);
+		 delay(2);
 
 		System.out.println("=====================");
 	}
@@ -52,61 +51,22 @@ public class SmokeTest extends OpenCartTestRunner {
 		Assert.assertTrue(lp.isDisplayedCreateMessage());
 		Assert.assertTrue(lp.isDisplayedAccountName());
 		Assert.assertTrue(lp.isDisplayedRefreshButton());
-		System.out.println("leAccount name = "+lp.getAccountNameText());
-//		lp.clickRefreshButton();
 
-		System.out.println("lework 1");
+		Assert.assertEquals(lp.getAccountNameText(), UserRepository.ACCOUNT2);
 
 		InMessagePage imp=lp
 				.clickChangeFrame()
 				.switchToInMessage();
 
-		System.out.println("MsgTitle = "+imp.getMsgTitle().getText());
+		Assert.assertEquals(imp.getInSubject().getText(), UserRepository.SUBJECT);
+		Assert.assertEquals(imp.getInBody().getText(), UserRepository.BODY);
 
-		Assert.assertEquals(imp.getMsgTitle().getText(), UserRepository.SUBJECT);
-
-		WebElement sender =
-				driver.findElement(By.xpath("/html[1]/body[1]/header[1]/div[3]/div[2]/span[1]"));
-
-		String expected = UserRepository.ACCOUNT1;
-
-		String actual = sender.getText();
+		String actual = imp.getSender().getText();
 		int strLength = actual.length();
 		actual = actual.substring(1, strLength-1);
+		Assert.assertEquals(actual, UserRepository.ACCOUNT1);
 
-		System.out.println("== sender actual - " + actual);
-		System.out.println("== sender expected - " + expected);
-		Assert.assertEquals(actual, expected);
-
-		WebElement body =
-				driver.findElement(By.xpath("/html[1]/body[1]/main[1]/div[1]/div[1]/div[1]"));
-
-		Assert.assertEquals(body.getText(), UserRepository.BODY);
-		/*WebElement letter =
-				driver.findElement(By.xpath("///body/div[2]/div[2]/button[1]/div[1]/span[2]"));
-		System.out.println("le letter  = "+letter.getText());
-		Assert.assertEquals(letter.getText(), UserRepository.ACCOUNT1);
-	*/	System.out.println("lework 2");
-		/*lp.clickChangeFrame()
-						.switchToMessage()
-				.getEmailTo()
-				.getText();
-
-		WebElement sender = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[2]/button[1]/div[1]/span[2]"));
-
-		Assert.assertEquals(sender.getText(), UserRepository.ACCOUNT1);
-
-		WebElement subject = driver.findElement(By.xpath("/html[1]/body[1]/header[1]/div[3]/div[1]"));
-
-		Assert.assertEquals(subject.getText(), UserRepository.SUBJECT);
-
-		WebElement body = driver.findElement(By.xpath("/html[1]/body[1]/main[1]/div[1]/div[1]/div[1]"));
-
-		Assert.assertEquals(body.getText(), UserRepository.BODY);
-*/
-
-
-		delay(6);
+		delay(2);
 
 		System.out.println("=====================");
 	}

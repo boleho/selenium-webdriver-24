@@ -14,13 +14,6 @@ public class LoginedPage {
 		initElements();
 	}
 	private void initElements() {
-	// delay to wait page loading to have selector visible
-		/*try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
 		accountName = driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]"));
 		createMessage = driver.findElement(By.xpath("//i[contains(text(),'\uE150')]"));
 		refreshButton = driver.findElement(By.xpath("//button[@id='refresh']"));
@@ -41,11 +34,6 @@ public class LoginedPage {
 	}
 	public LoginedPage clickCreateNewMessage() {
 		getCreateMessage().click();
-		System.out.println("le clickCreateMessage done");
-		try { Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
 		return this;
 	}
 	public boolean isDisplayedCreateMessage() {
@@ -65,11 +53,6 @@ public class LoginedPage {
 	}
 
 	public ChangeFrame clickChangeFrame() {
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
 		return new ChangeFrame(driver);
 	}
 }

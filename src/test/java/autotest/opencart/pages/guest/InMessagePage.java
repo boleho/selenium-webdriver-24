@@ -6,25 +6,37 @@ import org.openqa.selenium.WebElement;
 
 public class InMessagePage {
     public WebDriver driver;
-    private WebElement msgTitle;
+    private WebElement inSubject;
+    private WebElement sender;
+    private WebElement inBody;
     public InMessagePage(WebDriver driver) {
         this.driver=driver;
-        try { Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         initElements();
     }
     private void initElements() {
-        System.out.println("le InMessagePage start");
-        	msgTitle=driver.findElement(By.xpath("/html[1]/body[1]/header[1]/div[3]/div[1]"));
-        System.out.println("le InMessagePage end");
+        inSubject =driver.findElement(By.xpath("/html[1]/body[1]/header[1]/div[3]/div[1]"));
+        sender = driver.findElement(By.xpath("/html[1]/body[1]/header[1]/div[3]/div[2]/span[1]"));
+        inBody = driver.findElement(By.xpath("/html[1]/body[1]/main[1]/div[1]/div[1]/div[1]"));
     }
-
-    public WebElement getMsgTitle() {
-        return msgTitle;
+    // inSubject
+    public WebElement getInSubject() {
+        return inSubject;
     }
-    public boolean isDisplayedEmailTo() {
-        return getMsgTitle().isDisplayed();
+    public boolean isDisplayedInSubject() {
+        return getInSubject().isDisplayed();
+    }
+    // sender
+    public WebElement getSender() {
+        return sender;
+    }
+    public boolean isDisplayedSender() {
+        return getSender().isDisplayed();
+    }
+    // inBody
+    public WebElement getInBody() {
+        return inBody;
+    }
+    public boolean isDisplayedInBody() {
+        return getInBody().isDisplayed();
     }
 }
