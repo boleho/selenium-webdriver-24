@@ -22,13 +22,22 @@ public class ChangeFrame {
     public WebElement getIfmail() {
         return ifmail;
     }
-    public MessagePage switchToMessage() {
+    public NewMessagePage switchToNewMessage() {
         driver.switchTo().frame(getIfmail());
         System.out.println("switchToMessage done");
         try { Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        return new MessagePage(driver);
+        return new NewMessagePage(driver);
+    }
+    public InMessagePage switchToInMessage() {
+        driver.switchTo().frame(getIfmail());
+        System.out.println("switchToInMessage done");
+        try { Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return new InMessagePage(driver);
     }
 }

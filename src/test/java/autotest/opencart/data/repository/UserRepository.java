@@ -3,7 +3,7 @@ public final class UserRepository {
 	private static volatile UserRepository instance = null;
 	public static final String ACCOUNT1 = "acc_first24@yopmail.com";
 	public static final String ACCOUNT2 = "acc_second24@yopmail.com";
-	public static final String SUBJECT = "task webdriver";
+	public static final String SUBJECT = "le task webdriver";
 	public static final String BODY = "le, it's a message to check";
 	private UserRepository() {}
 	public static UserRepository get() {

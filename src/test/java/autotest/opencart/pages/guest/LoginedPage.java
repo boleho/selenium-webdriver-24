@@ -39,13 +39,14 @@ public class LoginedPage {
 	public WebElement getCreateMessage() {
 		return createMessage;
 	}
-	public ChangeFrame clickCreateMessage() {
+	public LoginedPage clickCreateNewMessage() {
 		getCreateMessage().click();
+		System.out.println("le clickCreateMessage done");
 		try { Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		return new ChangeFrame(driver);
+		return this;
 	}
 	public boolean isDisplayedCreateMessage() {
 		return getCreateMessage().isDisplayed();
@@ -55,8 +56,9 @@ public class LoginedPage {
 		return refreshButton;
 	}
 
-	public void clickRefreshButton() {
+	public LoginedPage clickRefreshButton() {
 		getRefreshButton().click();
+		return this;
 	}
 	public boolean isDisplayedRefreshButton() {
 		return getRefreshButton().isDisplayed();
