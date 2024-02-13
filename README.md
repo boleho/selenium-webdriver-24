@@ -2,7 +2,7 @@
 
 Task finished 13 Feb 2024
 
-Practisin Selenium Webdriver, TestNG, Page Object, Patterns - UserRepository. Singlrton, Static Factory
+Practising Selenium Webdriver, TestNG, Page Object, Patterns - UserRepository. Singleton, Static Factory
 
 Task consist of 2 parts:
 
