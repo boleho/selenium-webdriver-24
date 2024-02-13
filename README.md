@@ -1,6 +1,36 @@
 # selenium-webdriver-24
 
-==================branch opencart=====================
+Task finished 13 Feb 2024
+
+Practisin Selenium Webdriver, TestNG, Page Object, Patterns - UserRepository. Singlrton, Static Factory
+
+Task consist of 2 parts:
+
+1. Testing email service https://yopmail.com/en/ - branch mailserv 
+
+2. Testing www.opencart.com site - branch opencart 
+
+==================branch mailserv =====================
+
+Create 2 accounts on email service https://yopmail.com/en/
+
+acc_first24@yopmail.com
+
+acc_second24@yopmail.com
+
+Create a message in the 1st account and send it to the 2nd one
+Checked the message in the 2nd account
+There are tests in the SendNewMessageTest, CheckIncomeMessageTest classes
+
+CheckIncomeMessageTest depends on the SendNewMessageTest,
+
+Run tests - pom.xml or testng.xml or via *Test classes
+
+Tests work ok - 13 Feb 2024 for Chrome v.121
+
+Need to have right chromedriver.exe in folder \lib
+
+==================branch opencart =====================
 
 www.opencart.com site testing 
 
@@ -29,6 +59,5 @@ error - session not created: This version of ChromeDriver only supports Chrome v
 
 notation -  using WebDriverManager.chromedriver().setup() from io.github.bonigarcia.wdm.WebDriverManager
 
-================== branch 
 
 
