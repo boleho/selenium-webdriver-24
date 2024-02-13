@@ -43,7 +43,6 @@ public class LoginedPage {
 	public WebElement getRefreshButton() {
 		return refreshButton;
 	}
-
 	public LoginedPage clickRefreshButton() {
 		getRefreshButton().click();
 		return this;
@@ -51,7 +50,6 @@ public class LoginedPage {
 	public boolean isDisplayedRefreshButton() {
 		return getRefreshButton().isDisplayed();
 	}
-
 	public ChangeFrame clickChangeFrame() {
 		return new ChangeFrame(driver);
 	}

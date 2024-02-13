@@ -4,12 +4,12 @@
   <test name="Test11">
     <classes>
         <!-- -->
-        <class name="autotest.opencart.tests.SmokeTest"/>
-
+        <class name="autotest.opencart.tests.SendNewMessageTest"/>
+        <class name="autotest.opencart.tests.CheckIncomeMessageTest"/>
        <!--
-       <class name="autotest.opencart.tests.SmokeTest">
+       <class name="autotest.opencart.tests.SendNewMessageTest">
              <methods>
-                 <include name="smokeTest()"></include>
+                 <include name="sendMessage()"></include>
              </methods>
          </class>
         -->

@@ -1,8 +1,7 @@
 package autotest.opencart.data.repository;
 public class User {
 	private String email;
-	private User() {
-}
+	private User() {}
 	public static User getUser() {
 		return new User();
 	}
