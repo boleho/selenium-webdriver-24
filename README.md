@@ -1,8 +1,8 @@
 # selenium-webdriver-24
 
-Task finished 13 Feb 2024
+Task - practising Selenium Webdriver, TestNG, Page Object
 
-Practising Selenium Webdriver, TestNG, Page Object, Patterns - UserRepository. Singleton, Static Factory
+Patterns used - Page Object, UserRepository, Singleton, Static Factory
 
 Task consist of 2 parts:
 
@@ -38,7 +38,7 @@ There are tests in the SmokeTest.java class
 
 Run tests - pom.xml or testng.xml or SmokeTest class
 
-Tests work ok - 6 Feb 2024 for Chrome v.121
+Tests work ok - 13 Feb 2024 for Chrome v.121
 
 Need to have right chromedriver.exe in folder \lib
 
