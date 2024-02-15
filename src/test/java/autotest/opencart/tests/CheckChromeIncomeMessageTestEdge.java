@@ -6,7 +6,7 @@ import autotest.opencart.pages.guest.*;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-public class CheckIncomeMessageTest extends OpenCartTestRunner {
+public class CheckChromeIncomeMessageTestEdge extends OpenCartTestRunnerEdge {
 	@DataProvider
 	public Object[][] correctUsers2() {
 		return new Object[][] { { UserRepository.get().correctUser2() } };}

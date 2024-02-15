@@ -3,20 +3,17 @@ package autotest.opencart.tests;
 import autotest.opencart.pages.guest.TopPart;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
-public abstract class OpenCartTestRunner {
+public abstract class OpenCartTestRunnerChrome {
     private static final Long ONE_SECOND_DELAY = 1000L;
     protected WebDriver driver;
     @BeforeClass
     public void beforeClass() {
-//        System.setProperty("webdriver.edge.driver", "./lib/msedgedriver.exe");
-//        driver = new EdgeDriver();
         System.setProperty("webdriver.chrome.driver", "./lib/chromedriver.exe");
-         driver = new ChromeDriver();
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         //driver.manage().window().setSize(new Dimension(480, 640)); // mobile screen
         driver.get("https://yopmail.com/en/");

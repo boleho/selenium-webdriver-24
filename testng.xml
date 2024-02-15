@@ -4,10 +4,12 @@
   <test name="Test11">
     <classes>
         <!-- -->
-        <class name="autotest.opencart.tests.SendNewMessageTest"/>
-        <class name="autotest.opencart.tests.CheckIncomeMessageTest"/>
+        <class name="autotest.opencart.tests.SendChromeNewMessageTestChrome"/>
+        <class name="autotest.opencart.tests.SendChromeNewMessageTestEdge"/>
+        <class name="autotest.opencart.tests.CheckChromeIncomeMessageTestChrome"/>
+        <class name="autotest.opencart.tests.CheckChromeIncomeMessageTestEdge"/>
        <!--
-       <class name="autotest.opencart.tests.SendNewMessageTest">
+       <class name="autotest.opencart.tests.SendChromeNewMessageTestChrome">
              <methods>
                  <include name="sendMessage()"></include>
              </methods>
