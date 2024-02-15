@@ -19,7 +19,9 @@ acc_first24@yopmail.com
 acc_second24@yopmail.com
 
 Create a message in the 1st account and send it to the 2nd one
+
 Checked the message in the 2nd account
+
 There are tests in the SendNewMessageTest*, CheckIncomeMessageTest* classes
 
 CheckIncomeMessageTest* depends on the SendNewMessageTest*,
