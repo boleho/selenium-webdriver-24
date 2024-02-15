@@ -20,15 +20,15 @@ acc_second24@yopmail.com
 
 Create a message in the 1st account and send it to the 2nd one
 Checked the message in the 2nd account
-There are tests in the SendNewMessageTest, CheckIncomeMessageTest classes
+There are tests in the SendNewMessageTest*, CheckIncomeMessageTest* classes
 
-CheckIncomeMessageTest depends on the SendNewMessageTest,
+CheckIncomeMessageTest* depends on the SendNewMessageTest*,
 
 Run tests - pom.xml or testng.xml or via *Test classes
 
-Tests work ok - 13 Feb 2024 for Chrome v.121
+Tests work ok - 15 Feb 2024 for Chrome v.121 and Edge v.102
 
-Need to have right chromedriver.exe in folder \lib
+Need to have right chromedriver.exe and msedgedriver.exe in folder \lib
 
 ==================branch opencart =====================
 
