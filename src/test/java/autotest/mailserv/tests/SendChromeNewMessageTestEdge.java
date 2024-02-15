@@ -1,12 +1,12 @@
-package autotest.opencart.tests;
+package autotest.mailserv.tests;
 
-import autotest.opencart.data.repository.User;
-import autotest.opencart.data.repository.UserRepository;
-import autotest.opencart.pages.guest.*;
+import autotest.mailserv.data.repository.User;
+import autotest.mailserv.data.repository.UserRepository;
+import autotest.mailserv.pages.guest.*;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-public class SendChromeNewMessageTestChrome extends OpenCartTestRunnerChrome {
+public class SendChromeNewMessageTestEdge extends OpenCartTestRunnerEdge {
 	@DataProvider
 	public Object[][] correctUsers() {
 		return new Object[][] { { UserRepository.get().correctUser() } };}

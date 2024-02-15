@@ -1,4 +1,4 @@
-package autotest.opencart.data.repository;
+package autotest.mailserv.data.repository;
 public final class UserRepository {
 	private static volatile UserRepository instance = null;
 	public static final String ACCOUNT1 = "acc_first24@yopmail.com";

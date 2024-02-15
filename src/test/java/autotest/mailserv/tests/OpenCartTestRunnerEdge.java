@@ -1,6 +1,6 @@
-package autotest.opencart.tests;
+package autotest.mailserv.tests;
 
-import autotest.opencart.pages.guest.TopPart;
+import autotest.mailserv.pages.guest.TopPart;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterClass;

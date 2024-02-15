@@ -1,4 +1,4 @@
-package autotest.opencart.data.repository;
+package autotest.mailserv.data.repository;
 public class User {
 	private String email;
 	private User() {}

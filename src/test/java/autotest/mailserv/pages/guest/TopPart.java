@@ -1,6 +1,6 @@
-package autotest.opencart.pages.guest;
+package autotest.mailserv.pages.guest;
 
-import autotest.opencart.data.repository.User;
+import autotest.mailserv.data.repository.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
