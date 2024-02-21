@@ -1,6 +1,13 @@
 # selenium-webdriver-24
 
-==================branch mailserv=====================
+==================branch mailserv-multenv=====================
+
+branch contain the same task as branch mailserv, but:
+
+1. updated multi-browser test running
+
+2. use credentials according to environment used (dev/qa)
+
 
 Create 2 accounts on email service https://yopmail.com/en/
 
