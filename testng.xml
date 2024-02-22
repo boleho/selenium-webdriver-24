@@ -4,10 +4,8 @@
   <test name="Test11">
     <classes>
         <!-- -->
-        <class name="autotest.mailserv.tests.SendChromeNewMessageTestChrome"/>
-        <class name="autotest.mailserv.tests.SendChromeNewMessageTestEdge"/>
-        <class name="autotest.mailserv.tests.CheckChromeIncomeMessageTestChrome"/>
-        <class name="autotest.mailserv.tests.CheckChromeIncomeMessageTestEdge"/>
+        <class name="autotest.mailserv.tests.SendNewMessageTest"/>
+        <class name="autotest.mailserv.tests.CheckIncomeMessageTest"/>
        <!--
        <class name="autotest.mailserv.tests.SendChromeNewMessageTestChrome">
              <methods>

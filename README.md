@@ -8,6 +8,11 @@ branch contain the same task as branch mailserv, but:
 
 2. use credentials according to environment used (dev/qa)
 
+Run from command line: 
+mvn -Dbrowser=chrome -Denvironment=qa clean test
+mvn -Dbrowser=edge -Denvironment=qa clean test
+mvn -Dbrowser=chrome -Denvironment=dev clean test
+mvn -Dbrowser=edge -Denvironment=dev clean test
 
 Create 2 accounts on email service https://yopmail.com/en/
 

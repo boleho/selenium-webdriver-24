@@ -1,6 +1,7 @@
 package autotest.mailserv.pages.guest;
 
 import autotest.mailserv.data.repository.User;
+import autotest.mailserv.service.Uzer;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -51,6 +52,16 @@ public class TopPart {
 	}
 	public TopPart fillFields(User user) {
 		this.setEmail(user);
+		return this;
+	}
+	public TopPart setEmail1(Uzer user) {
+		clickEmail();
+		clearEmail();
+		getEmail().sendKeys(user.getUsername());
+		return this;
+	}
+	public TopPart fillFields1(Uzer user) {
+		this.setEmail1(user);
 		return this;
 	}
 }

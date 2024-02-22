@@ -1,20 +1,23 @@
 package autotest.mailserv.tests;
 
-import autotest.mailserv.data.repository.User;
 import autotest.mailserv.data.repository.UserRepository;
 import autotest.mailserv.pages.guest.*;
+import autotest.mailserv.service.UserCreator;
+import autotest.mailserv.service.Uzer;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-public class SendChromeNewMessageTestChrome extends OpenCartTestRunnerChrome {
-	@DataProvider
+public class SendNewMessageTest extends OpenCartTestRunner {
+	/*@DataProvider
 	public Object[][] correctUsers() {
-		return new Object[][] { { UserRepository.get().correctUser() } };}
-	 @Test(dataProvider = "correctUsers")
-	public void sendMessage(User correctUser) {
+		return new Object[][] { { UserRepository.get().correctUser() } };}*/
+	 //@Test(dataProvider = "correctUsers")
+	 @Test
+	//public void sendMessage(User correctUser) {
+		 public void sendMessage() {
+		 Uzer testUser = UserCreator.withCredentialsFromProperty();
 
 		 LoginedPage lp = loadApplication()
-				 .fillFields(correctUser)
+				 .fillFields1(testUser)
 				 .clickSubmitLogin();
 
 		 Assert.assertTrue(lp.isDisplayedCreateMessage());
