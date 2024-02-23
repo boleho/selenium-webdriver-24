@@ -7,15 +7,12 @@ public class DriverSingleton {
     private DriverSingleton(){}
     public static WebDriver getDriver(){
         if (null == driver){
-            switch (System.getProperty("browser")){
-                case "edge": {
-                    System.setProperty("webdriver.edge.driver", "./lib/msedgedriver.exe");
-                    driver = new EdgeDriver();
-                }
-                default: {
-                    System.setProperty("webdriver.chrome.driver", "./lib/chromedriver.exe");
-                    driver = new ChromeDriver();
-                }
+            if (System.getProperty("browser").equals("edge")) {
+                System.setProperty("webdriver.edge.driver", "./lib/msedgedriver.exe");
+                driver = new EdgeDriver();
+            } else {
+                System.setProperty("webdriver.chrome.driver", "./lib/chromedriver.exe");
+                driver = new ChromeDriver();
             }
             driver.manage().window().maximize();
             //driver.manage().window().setSize(new Dimension(480, 640)); // mobile screen

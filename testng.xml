@@ -3,16 +3,16 @@
 <suite name="Suite1">
   <test name="Test11">
     <classes>
-        <!-- -->
-        <class name="autotest.mailserv.tests.SendNewMessageTest"/>
-        <class name="autotest.mailserv.tests.CheckIncomeMessageTest"/>
-       <!--
-       <class name="autotest.mailserv.tests.SendChromeNewMessageTestChrome">
-             <methods>
-                 <include name="sendMessage()"></include>
-             </methods>
-         </class>
-        -->
+        <!---->
+                <class name="autotest.mailserv.tests.SendNewMessageTest"/>
+                 <class name="autotest.mailserv.tests.CheckIncomeMessageTest"/>
+        <!--
+        <class name="autotest.mailserv.tests.SendChromeNewMessageTestChrome">
+              <methods>
+                  <include name="sendMessage()"></include>
+              </methods>
+          </class>
+         -->
     </classes>
   </test>   
   

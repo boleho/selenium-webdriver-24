@@ -6,11 +6,7 @@ import autotest.mailserv.service.UserCreator;
 import autotest.mailserv.service.Uzer;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-public class SendNewMessageTest extends OpenCartTestRunner {
-	/*@DataProvider
-	public Object[][] correctUsers() {
-		return new Object[][] { { UserRepository.get().correctUser() } };}*/
-	 //@Test(dataProvider = "correctUsers")
+public class SendNewMessageTest extends TestRunner {
 	 @Test
 	//public void sendMessage(User correctUser) {
 		 public void sendMessage() {

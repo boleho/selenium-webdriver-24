@@ -6,7 +6,7 @@ import autotest.mailserv.pages.guest.*;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-public class CheckIncomeMessageTest extends OpenCartTestRunner {
+public class CheckIncomeMessageTest extends TestRunner {
 	@DataProvider
 	public Object[][] correctUsers2() {
 		return new Object[][] { { UserRepository.get().correctUser2() } };}
@@ -32,12 +32,7 @@ public class CheckIncomeMessageTest extends OpenCartTestRunner {
 		Assert.assertEquals(imp.getInSubject().getText(), UserRepository.SUBJECT);
 		Assert.assertEquals(imp.getInBody().getText(), UserRepository.BODY);
 
-		//next line instead of following four lines
 		Assert.assertTrue(imp.getSender().getText().contains(UserRepository.ACCOUNT1));
-		/*String actual = imp.getSender().getText();
-		int strLength = actual.length();
-		actual = actual.substring(1, strLength-1);
-		Assert.assertEquals(actual, UserRepository.ACCOUNT1);*/
 
 		delay(2);
 	}
