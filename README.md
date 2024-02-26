@@ -6,7 +6,7 @@ Patterns used - Page Object, UserRepository, Singleton, Static Factory
 
 Task consist of 2 parts:
 
-1. Testing email service https://yopmail.com/en/ - branch mailserv 
+1. Testing email service https://yopmail.com/en/ - branch mailserv, mailserv-multenv
 
 2. Testing www.opencart.com site - branch opencart 
 
@@ -54,6 +54,9 @@ environment qa - acc_first24@yopmail.com (this choice both tests are run ok)
 
 environment dev - acc_third24@yopmail.com (this choice the 2nd test failed - it's ok)
 
+Tests work ok - 23 Feb 2024 for Chrome v.121 and Edge v.102
+
+Need to have right chromedriver.exe and msedgedriver.exe in folder \lib
 
 ==================branch opencart =====================
 
