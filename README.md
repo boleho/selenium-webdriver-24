@@ -54,7 +54,7 @@ environment qa - acc_first24@yopmail.com (this choice both tests are run ok)
 
 environment dev - acc_third24@yopmail.com (this choice the 2nd test failed - it's ok)
 
-Tests work ok - 23 Feb 2024 for Chrome v.121 and Edge v.102
+Tests work ok - 26 Feb 2024 for Chrome v.121 and Edge v.102
 
 Need to have right chromedriver.exe and msedgedriver.exe in folder \lib
 
