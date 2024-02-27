@@ -1,8 +1,8 @@
 # selenium-webdriver-24
 
-==================branch mailserv-multenv=====================
+==================branch mailserv-log=====================
 
-branch has the same tasks and results as branch mailserv, but run via scripts
+branch has the same tasks and results as branch mailserv-multenv, but logging is added
 
 we can use credentials according to environment used (qa/dev)
 
