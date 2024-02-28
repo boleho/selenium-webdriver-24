@@ -80,6 +80,23 @@ Tests work ok - 13 Feb 2024 for Chrome v.121
 
 Need to have right chromedriver.exe in folder \lib
 
+==================branch mailserv-driveman=====================
+
+branch has the same tasks and results as branch mailserv-log, but WebDriverManager used
+
+used:
+
+WebDriverManager.chromedriver().setup();
+
+instead of:
+
+System.setProperty("webdriver.chrome.driver", "./lib/chromedriver.exe");
+
+no need /lib/chromedriver.exe
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+
 ==================branch epstud==================
 
 practising Selenium Webdriver according to materials from EPAM on-line course Selenium Webdriver
