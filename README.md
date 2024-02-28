@@ -60,9 +60,13 @@ Need to have right chromedriver.exe and msedgedriver.exe in folder \lib
 
 ==================branch mailserv-log=====================
 
-branch has the same tasks and results as branch mailserv-multenv, but logging is added
+branch has the same tasks and results as branch mailserv-multenv, but:
 
-WIP 27 Feb 2024
+1. logging is added - D:\CODE\IDEA\selenium-webdriver-24\target\logs
+
+2. If test is failed - screenshot is made - D:\CODE\IDEA\selenium-webdriver-24\target\screenshots 
+
+Tests work ok - 28 Feb 2024 for Chrome v.121 and Edge v.102
 
 ==================branch opencart =====================
 
