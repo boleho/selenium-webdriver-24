@@ -2,7 +2,13 @@
 
 ==================branch mailserv-log=====================
 
-branch has the same tasks and results as branch mailserv-multenv, but logging is added
+branch has the same tasks and results as branch mailserv-multenv, but:
+
+1. logging is added - D:\CODE\IDEA\selenium-webdriver-24\target\logs
+
+2. If test is failed - screenshot is made - D:\CODE\IDEA\selenium-webdriver-24\target\screenshots
+
+-----------------------------------------
 
 we can use credentials according to environment used (qa/dev)
 

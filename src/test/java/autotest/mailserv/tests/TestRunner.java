@@ -2,9 +2,11 @@ package autotest.mailserv.tests;
 
 import autotest.mailserv.driver.DriverSingleton;
 import autotest.mailserv.pages.guest.TopPart;
+import autotest.mailserv.util.TestListener;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 
+@Listeners({TestListener.class})
 public abstract class TestRunner {
     private static final Long ONE_SECOND_DELAY = 1000L;
     protected WebDriver driver;
