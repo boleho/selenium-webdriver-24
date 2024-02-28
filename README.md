@@ -40,7 +40,7 @@ Create 2 accounts on email service https://yopmail.com/en/
 2. Checked the message in the 2nd account
 ----------------------------------
 
-Tests work ok - 26 Feb 2024 for Chrome v.121 and Edge v.102
+Tests work ok - 28 Feb 2024 for Chrome v.121 and Edge v.102
 
 Need to have right chromedriver.exe and msedgedriver.exe in folder \lib
 
