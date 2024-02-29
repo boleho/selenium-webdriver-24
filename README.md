@@ -92,6 +92,10 @@ mvn -Dbrowser=chrome -Denvironment=dev clean test
 
 mvn -Dbrowser=edge -Denvironment=dev clean test
 
+environment qa - acc_first24@yopmail.com (this choice both tests are run ok)
+
+environment dev - acc_third24@yopmail.com (this choice the 2nd test failed - it's ok)
+
 ==================branch opencart =====================
 
 www.opencart.com site testing 
