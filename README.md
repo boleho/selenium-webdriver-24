@@ -14,7 +14,11 @@ we can use credentials according to environment used (qa/dev)
 
 we can choose browser also (chrome/edge)
 
-Run from command line: 
+Run:
+
+1. Jenkins - TASK FRAMEWORK MAILSERV
+
+2. from command line: 
 
 mvn -Dbrowser=chrome -Denvironment=qa clean test
 
