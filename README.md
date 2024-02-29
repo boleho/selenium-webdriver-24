@@ -10,6 +10,16 @@ Task consist of 2 parts:
 
 2. Testing www.opencart.com site - branch opencart 
 
+================== branch main ==================
+
+documentation only
+
+Last developed branch - mailserv-log
+
+More details is in the Readme-files of the specific branches
+
+Project is finished on 29 Feb 2024
+
 ==================branch mailserv =====================
 
 Create 2 accounts on email service https://yopmail.com/en/
@@ -66,7 +76,21 @@ branch has the same tasks and results as branch mailserv-multenv, but:
 
 2. If test is failed - screenshot is made - D:\CODE\IDEA\selenium-webdriver-24\target\screenshots 
 
-Tests work ok - 28 Feb 2024 for Chrome v.121 and Edge v.102
+Tests work ok - 29 Feb 2024 for Chrome v.121 and Edge v.102
+
+Run:
+
+1. Jenkins - TASK FRAMEWORK MAILSERV
+
+2. from command line: 
+
+mvn -Dbrowser=chrome -Denvironment=qa clean test
+
+mvn -Dbrowser=edge -Denvironment=qa clean test
+
+mvn -Dbrowser=chrome -Denvironment=dev clean test
+
+mvn -Dbrowser=edge -Denvironment=dev clean test
 
 ==================branch opencart =====================
 
@@ -97,22 +121,7 @@ no need /lib/chromedriver.exe
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
-==================branch epstud==================
 
-practising Selenium Webdriver according to materials from EPAM on-line course Selenium Webdriver
-
-more details in branch epstud readme-file
-
-
-================== branch main ==================
-
-project JAVA-MAVEN from GitHub Bogdanom.
-
-!!! doesn't work 30 Jan 24. 
-
-error - session not created: This version of ChromeDriver only supports Chrome version 114 Current browser version is 121.
-
-notation -  using WebDriverManager.chromedriver().setup() from io.github.bonigarcia.wdm.WebDriverManager
 
 
 
